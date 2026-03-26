@@ -28,6 +28,42 @@ body {
     padding: 0 20px;
 }
 
+
+/* Estilos da Tela de Boas-Vindas */
+.welcome-card {
+    text-align: center;
+    max-width: 500px !important;
+}
+
+.welcome-card h1 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.welcome-card p {
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.welcome-features {
+    text-align: left;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.welcome-features ul {
+    list-style: none;
+}
+
+.welcome-features li {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+
 /* Páginas de autenticação */
 .auth-container {
     display: flex;
