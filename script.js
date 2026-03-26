@@ -4,6 +4,8 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
 let works = JSON.parse(localStorage.getItem('works')) || [];
 
 // Elementos da página
+const welcomePage = document.getElementById('welcome-page');
+const startBtn = document.getElementById('start-btn');
 const loginPage = document.getElementById('login-page');
 const registerPage = document.getElementById('register-page');
 const dashboard = document.getElementById('dashboard');
@@ -21,6 +23,22 @@ const modalTitle = document.getElementById('modal-title');
 const closeModalBtn = document.querySelector('.close-modal');
 
 // Funções de autenticação
+
+function showWelcomePage() {
+    welcomePage.style.display = 'flex';
+    loginPage.style.display = 'none';
+    registerPage.style.display = 'none';
+    dashboard.style.display = 'none';
+}
+
+function showLoginPage() {
+    welcomePage.style.display = 'none'; // Adicionado
+    loginPage.style.display = 'flex';
+    registerPage.style.display = 'none';
+    dashboard.style.display = 'none';
+}
+
+
 function showLoginPage() {
     loginPage.style.display = 'flex';
     registerPage.style.display = 'none';
@@ -214,6 +232,7 @@ function closeWorkModal() {
 }
 
 // lista de eventos
+startBtn.addEventListener('click', showLoginPage);
 loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('login-email').value;
@@ -303,5 +322,5 @@ function showMessage(elementId, message, type) {
 if (currentUser) {
     showDashboard();
 } else {
-    showLoginPage();
+    showWelcomePage(); // Agora inicia na tela de boas-vindas
 }
