@@ -6,8 +6,6 @@ let works = JSON.parse(localStorage.getItem('works')) || [];
 // Elementos da página
 const welcomePage = document.getElementById('welcome-page');
 const startBtn = document.getElementById('start-btn');
-const loginPage = document.getElementById('login-page');
-const registerPage = document.getElementById('register-page');
 const dashboard = document.getElementById('dashboard');
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('register-form');
@@ -33,13 +31,6 @@ function showWelcomePage() {
 
 function showLoginPage() {
     welcomePage.style.display = 'none'; // Adicionado
-    loginPage.style.display = 'flex';
-    registerPage.style.display = 'none';
-    dashboard.style.display = 'none';
-}
-
-
-function showLoginPage() {
     loginPage.style.display = 'flex';
     registerPage.style.display = 'none';
     dashboard.style.display = 'none';
